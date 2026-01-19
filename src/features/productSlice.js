@@ -14,7 +14,7 @@ const productSlice = createSlice({
 export const { setProducts } = productSlice.actions;
 
 export const fetchProducts = () => async (dispatch) => {
-  const res = await axios.get(`{api}/api/products`);
+  const res = await axios.get(`${api}/api/products`);
   dispatch(setProducts(res.data));
 };
 
