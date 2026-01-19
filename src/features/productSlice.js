@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+const api = import.meta.env.VITE_API_URL;
+
 
 const productSlice = createSlice({
   name: "products",
@@ -12,7 +14,7 @@ const productSlice = createSlice({
 export const { setProducts } = productSlice.actions;
 
 export const fetchProducts = () => async (dispatch) => {
-  const res = await axios.get("http://localhost:5000/api/products");
+  const res = await axios.get(`{api}/api/products`);
   dispatch(setProducts(res.data));
 };
 
