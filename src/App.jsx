@@ -1,15 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Login from "./pages/Login.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Products from "./pages/Products";
+import ProtectedRoutes from "./pages/ProtectedRoutes";
+
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route
+          path="/products"
+          element={
+            <ProtectedRoutes>
+              <Products />
+            </ProtectedRoutes>
+          }
+        />
+        <Route path="/" element={<Login />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
