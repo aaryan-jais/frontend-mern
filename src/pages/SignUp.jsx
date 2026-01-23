@@ -9,18 +9,17 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { loading, error, message } = useSelector((state) => state.auth);
+  const { loading, error, token } = useSelector((state) => state.auth);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(signupUser({ name, email, password }));
   };
 
- useEffect(() => {
-    if (message) {
-      setTimeout(() => navigate("/login"), 1200);
-    }
-  }, [message]);
+  useEffect(() => {
+    if (token) navigate("/products");
+  }, [token]);
+
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <form
