@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-const api = import.meta.env.VITE_API_URL;
+const api_URL = import.meta.env.VITE_API_URL;
 // const api_local= import.meta.env.VITE_LOCAL_URL;
 
 
@@ -16,7 +16,7 @@ const productSlice = createSlice({
 export const { setProducts } = productSlice.actions;
 
 export const fetchProducts = () => async (dispatch) => {
-  const res = await axios.get(`${api_local}/api/products`);
+  const res = await axios.get(`${api_URL}/api/products`);
   dispatch(setProducts(res.data));
 };
 
