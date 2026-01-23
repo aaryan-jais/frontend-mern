@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../features/authSlice";
+import axios from "../api/axiosInstance";
+
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -12,7 +14,7 @@ const Products = () => {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/products",
+          "/products",
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setProducts(res.data);
