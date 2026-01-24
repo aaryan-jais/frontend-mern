@@ -11,7 +11,6 @@ export default function Home() {
     const phones = [
     {
     "name": "Apple iPhone 14",
-    "category": "Electronics",
     "price": 999,
     "description": "Latest Apple iPhone with A15 Bionic chip, 6.1-inch display, and advanced camera system.",
     "image": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-14-model-unselect-gallery-1-202209?wid=2560&hei=1440&fmt=jpeg&qlt=95&.v=1660689596976",
@@ -19,7 +18,6 @@ export default function Home() {
   },
   {
     "name": "Samsung Galaxy S23",
-    "category": "Electronics",
     "price": 899,
     "description": "High-performance Android phone with 6.2-inch AMOLED display and triple camera setup.",
     "image": "https://cdn.mos.cms.futurecdn.net/bi2fE37yffyQnsVLKB6mxB-1920-80.jpg",
@@ -27,7 +25,6 @@ export default function Home() {
   },
   {
     "name": "Sony WH-1000XM5 Headphones",
-    "category": "Electronics",
     "price": 399,
     "description": "Industry-leading noise cancellation wireless headphones with 30-hour battery life.",
     "image": "https://tse1.mm.bing.net/th/id/OIP.bXc4P00aur4lEKsPSKGvTAHaE8?pid=Api&P=0&h=180",
@@ -35,7 +32,6 @@ export default function Home() {
   },
   {
     "name": "Apple MacBook Air M2",
-    "category": "Electronics",
     "price": 1199,
     "description": "Ultra-thin laptop with M2 chip, 13.6-inch Retina display, and all-day battery life.",
     "image": "https://tse1.mm.bing.net/th/id/OIP.J_C_ltP-XLSCClCRTcEdoAHaE8?pid=Api&P=0&h=180",

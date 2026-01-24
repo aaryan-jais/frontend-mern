@@ -39,7 +39,7 @@ export default function Navbar() {
           <Link to="/" className="block hover:text-blue-600">Home</Link>
           <Link to="/products" className="block hover:text-blue-600">Products</Link>
           <Link to="/login" className="block hover:text-blue-600">Login</Link>
-          <Link to="/register" className="block hover:text-blue-600">Register</Link>
+          <Link to="/signup" className="block hover:text-blue-600">Register</Link>
           
         </div>
       )}
