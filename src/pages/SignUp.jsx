@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { signupUser } from "../features/authSlice";
 import { useNavigate, Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -21,7 +22,9 @@ const SignUp = () => {
   }, [token]);
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
+    <>
+    <Navbar/>
+    <div className=" dark:bg-gray-900  flex items-center justify-center h-screen bg-gray-100">
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded shadow-md w-96"
@@ -60,6 +63,8 @@ const SignUp = () => {
         </p>
       </form>
     </div>
+
+    </>
   );
 };
 

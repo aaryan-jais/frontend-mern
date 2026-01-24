@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../features/authSlice";
 import { useNavigate, Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,7 +21,9 @@ const Login = () => {
   }, [token]);
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
+    <>
+    <Navbar/>
+    <div className="flex items-center justify-center dark:bg-gray-900  h-screen bg-gray-100">
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded shadow-md w-96"
@@ -52,6 +55,7 @@ const Login = () => {
         </p>
       </form>
     </div>
+    </>
   );
 };
 

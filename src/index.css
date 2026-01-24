@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body{
+    font-family: "Montserrat";
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Dancing Script", cursive;
+
+}
